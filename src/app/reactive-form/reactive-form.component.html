@@ -1,0 +1,8 @@
+<form   [formGroup]="myFriendForm"> 
+    <label for="name">Student Name</label>
+   <input placeholder="enter your name" formControlName="name" />
+
+   <div formArrayName="marks" *ngFor="let mark of marks.controls">
+     <h4>{{mark.value}}</h4>
+   </div>
+</form>
